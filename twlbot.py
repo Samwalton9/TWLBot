@@ -5,10 +5,11 @@ import urllib
 import logging
 
 logger = logging.getLogger(__name__)
+logging.basicConfig(filename='twlbot.log',level=logging.INFO)
 
 site = pywikibot.Site()
 
-TWLJ = 'User:TWLBot/sandbox'
+TWLJ = 'Template:TWLJ'
 with open('library_card_partners.json', encoding='utf-8') as json_file:
     library_card_partners = json.loads(json_file.read())
 
