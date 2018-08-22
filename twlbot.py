@@ -3,14 +3,18 @@ import json
 import re
 import urllib
 import logging
+import os
+
+directory = os.path.dirname(os.path.realpath(__file__))
 
 logger = logging.getLogger(__name__)
-logging.basicConfig(filename='twlbot.log',level=logging.INFO)
+logging.basicConfig(filename=os.path.join(directory, 'twlbot.log'),level=logging.INFO)
 
 site = pywikibot.Site()
 
 TWLJ = 'Template:TWLJ'
-with open('library_card_partners.json', encoding='utf-8') as json_file:
+
+with open(os.path.join(directory, 'library_card_partners.json'), encoding='utf-8') as json_file:
     library_card_partners = json.loads(json_file.read())
 
 
