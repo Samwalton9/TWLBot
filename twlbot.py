@@ -124,7 +124,7 @@ def process_twlj():
     # Only update if we've got a change.
     if original_page_text != joined_page_text:
         page.text = joined_page_text
-        page.save("Updating availability")
+        page.save("Updating availability", minor=False)
 
 
 if can_bot_run():
