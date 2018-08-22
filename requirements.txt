@@ -1,2 +1,2 @@
-pywikibot==3.0.dev0
+pywikibot==3.0.20180710
 requests-oauthlib==1.0.0
